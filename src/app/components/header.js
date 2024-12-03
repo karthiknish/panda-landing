@@ -16,10 +16,13 @@ export default function Header() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
-            <button className="bg-[#ff7008] text-white px-6 py-2 rounded-full hover:bg-[#e66507] transition-colors">
+          <div className="hidden md:flex items-end space-x-8">
+            <Link
+              href="/contact"
+              className="bg-[#ff7008] text-white px-6 py-2 rounded-full hover:bg-[#e66507] transition-colors"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </nav>
       </div>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
@@ -13,7 +13,14 @@ export default function Home() {
             Therapy and Assessment Options for Children with Autism, Sensory
             Processing Challenges, and Disabilities
           </h2>
-          <button className="bg-[#ff7008] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e66507] transition-colors">
+          <button
+            onClick={() =>
+              document
+                .getElementById("services")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="bg-[#ff7008] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e66507] transition-colors"
+          >
             Get Started Today
           </button>
         </div>
@@ -85,7 +92,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4">
+      <section id="services" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-semibold text-center text-[#1d4c6b] mb-12">
             Our Services
