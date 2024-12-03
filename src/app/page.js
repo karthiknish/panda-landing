@@ -247,6 +247,12 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 className="w-full bg-[#1d4c6b] text-white py-2 rounded-lg hover:bg-opacity-90 transition-colors"
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/pandapuzzle-info/action-plan",
+                    "_blank"
+                  )
+                }
               >
                 Book Now
               </motion.button>
@@ -273,6 +279,12 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 className="w-full bg-[#1d4c6b] text-white py-2 rounded-lg hover:bg-opacity-90 transition-colors"
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/pandapuzzle-info/talking-therapies",
+                    "_blank"
+                  )
+                }
               >
                 Book Now
               </motion.button>
