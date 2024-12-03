@@ -17,26 +17,8 @@ export default function Header() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/services"
-              className="text-[#1d4c6b] hover:text-[#ff7008] transition-colors"
-            >
-              Services
-            </Link>
-            <Link
-              href="/about"
-              className="text-[#1d4c6b] hover:text-[#ff7008] transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
-              className="text-[#1d4c6b] hover:text-[#ff7008] transition-colors"
-            >
-              Contact
-            </Link>
             <button className="bg-[#ff7008] text-white px-6 py-2 rounded-full hover:bg-[#e66507] transition-colors">
-              Get Started
+              Contact Us
             </button>
           </div>
         </nav>
