@@ -117,7 +117,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gray-50 p-6 rounded-lg"
+              className="bg-gray-50 p-6 relative border border-gray-400 rounded-lg"
             >
               <h4 className="text-xl font-semibold text-[#1d4c6b] mb-3">
                 Evidence-Based Care
@@ -133,7 +133,7 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gray-50 p-6 rounded-lg"
+              className="bg-gray-50 p-6 relative border border-gray-400 rounded-lg"
             >
               <h4 className="text-xl font-semibold text-[#1d4c6b] mb-3">
                 Personalised Approach
