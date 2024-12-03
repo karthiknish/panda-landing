@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Particles from "@/components/ui/particles";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const [color, setColor] = useState("#ffffff");
@@ -21,6 +22,7 @@ export default function Home() {
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     setColor(randomColor);
   }, [resolvedTheme]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -38,37 +40,55 @@ export default function Home() {
           refresh
         />
         <div className="max-w-6xl mx-auto px-4 text-center text-white">
-          <motion.h1
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
-          >
-            Welcome to Panda Puzzle
-          </motion.h1>
-          <motion.h2
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-2xl md:text-3xl font-semibold mb-8"
-          >
-            Therapy and Assessment Options for Children with Autism, Sensory
-            Processing Challenges, and Disabilities
-          </motion.h2>
-          <motion.button
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            onClick={() =>
-              document
-                .getElementById("services")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="bg-[#ff7008] text-white px-8 py-3 rounded-full z-10 text-lg font-semibold hover:bg-[#e66507] transition-colors"
-          >
-            Get Started Today
-          </motion.button>
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="md:w-1/2 text-left">
+              <motion.h1
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="text-5xl md:text-6xl font-bold mb-6"
+              >
+                Supporting Growth,{" "}
+                <span className="text-[#ff7008]">Embracing</span> Differences
+              </motion.h1>
+              <motion.p
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                className="text-xl md:text-2xl mb-8"
+              >
+                At Panda Puzzle, we empower families and children by providing
+                specialized support in all life areas. Together, we work to
+                discover and nurture your child's unique potential.
+              </motion.p>
+              <motion.button
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.7, duration: 0.8 }}
+                whileHover={{ scale: 1.05 }}
+                onClick={() =>
+                  document
+                    .getElementById("services")
+                    .scrollIntoView({ behavior: "smooth" })
+                }
+                className="bg-[#ff7008] text-white px-8 py-3 rounded-full z-10 text-lg font-semibold hover:bg-[#e66507] transition-colors"
+              >
+                Get Started
+              </motion.button>
+            </div>
+            <motion.div
+              className="md:w-1/2 mt-8 md:mt-0"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              <img
+                src="/assets/hero.jpg"
+                alt="Children playing with toys"
+                className="w-full h-auto rounded-lg"
+              />
+            </motion.div>
+          </div>
         </div>
       </motion.section>
 
