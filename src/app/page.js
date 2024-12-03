@@ -249,7 +249,7 @@ export default function Home() {
                 whileHover={{ scale: 1.02 }}
                 className="w-full bg-[#1d4c6b] text-white py-2 rounded-lg hover:bg-opacity-90 transition-colors"
               >
-                Learn More
+                Book Now
               </motion.button>
             </motion.div>
           </div>
