@@ -6,3 +6,8 @@
   --accent-teal: #80d0c6;
   --accent-orange: #ff7008;
 }
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}

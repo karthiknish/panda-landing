@@ -1,8 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import Particles from "@/components/ui/particles";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 export default function Home() {
+  const { resolvedTheme } = useTheme();
+  const [color, setColor] = useState("#ffffff");
+
+  useEffect(() => {
+    // Randomly select a color from an array of pastel colors
+    const colors = [
+      "#FFB6C1",
+      "#87CEEB",
+      "#98FB98",
+      "#DDA0DD",
+      "#F0E68C",
+      "#E6E6FA",
+    ];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    setColor(randomColor);
+  }, [resolvedTheme]);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -12,6 +30,13 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="relative h-[80vh] flex items-center justify-center bg-gradient-to-b from-[#1d4c6b] to-[#80d0c6]"
       >
+        <Particles
+          className="absolute inset-0"
+          quantity={300}
+          ease={10}
+          color={color}
+          refresh
+        />
         <div className="max-w-6xl mx-auto px-4 text-center text-white">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
@@ -40,7 +65,7 @@ export default function Home() {
                 .getElementById("services")
                 .scrollIntoView({ behavior: "smooth" })
             }
-            className="bg-[#ff7008] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-[#e66507] transition-colors"
+            className="bg-[#ff7008] text-white px-8 py-3 rounded-full z-10 text-lg font-semibold hover:bg-[#e66507] transition-colors"
           >
             Get Started Today
           </motion.button>
