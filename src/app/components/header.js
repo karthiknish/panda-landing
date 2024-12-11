@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
@@ -16,14 +16,12 @@ export default function Header() {
             />
           </Link>
 
-          <div className="hidden md:flex items-end space-x-8">
-            <Link
-              href="/contact"
-              className="bg-[#ff7008] text-white px-6 py-2 rounded-full hover:bg-[#e66507] transition-colors"
-            >
-              Contact Us
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="bg-[#ff7008] text-white px-6 py-2 rounded-full hover:bg-[#e66507] transition-colors"
+          >
+            Contact Us
+          </Link>
         </nav>
       </div>
     </header>
