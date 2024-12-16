@@ -50,7 +50,10 @@ export default function Home() {
                 className="text-5xl md:text-6xl font-bold mb-6"
               >
                 Supporting Growth,{" "}
-                <span className="text-[#ff7008]">Embracing</span> Differences
+                <span className="text-[#ff7008] relative mr-4 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[4px] after:mb-2 after:w-full after:bg-[#ff7008] after:rounded-r-lg">
+                  Embracing
+                </span>{" "}
+                Differences
               </motion.h1>
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
@@ -78,13 +81,13 @@ export default function Home() {
               </motion.button>
             </div>
             <motion.div
-              className="md:w-5/12  mt-8 md:mt-0"
+              className="md:w-1/2  mt-8 md:mt-0"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
               <img
-                src="/assets/hero.jpg"
+                src="/hero.jpg"
                 alt="Children playing with toys"
                 className="w-full h-auto rounded-lg"
               />
@@ -168,75 +171,7 @@ export default function Home() {
           </div>
         </div>
       </motion.section>
-      {/* <div className="max-w-7xl mx-auto w-full px-4 py-16">
-        <h2 className="text-3xl font-semibold text-center text-[#1d4c6b] mb-12">
-          Child-Centered Support Programs
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <WobbleCard
-            containerClassName="col-span-1 lg:col-span-2 h-full bg-[#1d4c6b] min-h-[500px] lg:min-h-[300px]"
-            className=""
-          >
-            <div className="w-full lg:max-w-xs">
-              <h3 className="text-left text-balance text-lg md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-                Sensory-Informed Assessment & Planning
-              </h3>
-              <p className="mt-4 text-left text-base/6 text-neutral-200">
-                Our expert team creates personalized support plans based on your
-                child's unique sensory profile, emotional needs, and
-                communication style. We observe and understand their individual
-                triggers and preferences to develop targeted strategies.
-              </p>
-            </div>
-            <Image
-              src="/sensory1.jpg"
-              width={800}
-              height={800}
-              alt="Child assessment image"
-              className="lg:absolute lg:right-0 lg:sm:right-10 lg:md:right-20 lg:lg:-right-10 lg:bottom-0 lg:top-5 w-full lg:w-[60%] mt-4 lg:mt-0 object-contain rounded-2xl"
-            />
-          </WobbleCard>
-          <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-[#ff7008]">
-            <h3 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-              Online Consultation
-            </h3>
-            <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-              We provide convenient online consultations to support families
-              from anywhere. Our virtual sessions offer expert guidance and
-              personalized strategies that you can implement at home.
-            </p>
-            <Image
-              src="/sensory2.jpg"
-              width={800}
-              height={800}
-              alt="Online consultation image"
-              className="absolute left-1/2 transform -translate-x-1/2  w-[50%] -bottom-20 lg:w-[60%] object-contain rounded-2xl mt-10"
-            />
-          </WobbleCard>
-          <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-[#1d4c6b] min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-            <div className="max-w-sm">
-              <h3 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-                Family Resources & Support
-              </h3>
-              <p className="mt-4 max-w-[26rem] text-left text-base/6 text-neutral-200">
-                We provide families with carefully curated resources, guides,
-                and practical strategies to help create supportive home
-                environments. Our evidence-based materials emphasize positive
-                reinforcement and nurturing relationships to support your
-                child's development.
-              </p>
-            </div>
-            <Image
-              src="/sensory3.jpg"
-              width={500}
-              height={500}
-              alt="Family resources image"
-              className="absolute right-0 lg:right-10 top-5 w-[60%] lg:w-[40%] object-contain rounded-2xl"
-            />
-          </WobbleCard>
-        </div>
-      </div> */}
-      {/* Why Choose Us Section */}
+
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
