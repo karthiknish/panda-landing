@@ -9,6 +9,11 @@
 @layer base {
   :root {
     --radius: 0.5rem;
+    --brand: 27 96% 61%;
+    --brand-foreground: 31 97% 72%;
+  }
+  .dark {
+    --brand: 31 97% 72%;
   }
 }
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
@@ -17,4 +22,51 @@
   html {
     font-family: "DM Sans", sans-serif;
   }
+}
+
+.puzzle-piece {
+  background: #f0f0f0;
+  position: relative;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.puzzle-piece::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.puzzle-piece::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.curved {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.curved::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 15px;
+  width: 100%;
+  border: solid 2px hsl(var(--brand));
+  border-color: hsl(var(--brand)) transparent transparent transparent;
+  border-radius: 30%;
 }

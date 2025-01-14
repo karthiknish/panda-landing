@@ -13,17 +13,34 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-    },
+  	extend: {
+  		colors: {
+  			background: 'var(--background)',
+  			foreground: 'var(--foreground)',
+  			brand: 'hsl(var(--brand))',
+  			'brand-foreground': 'hsl(var(--brand-foreground))'
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'appear-zoom': {
+  				'0%': {
+  					opacity: '0',
+  					transform: 'scale(0.95)'
+  				},
+  				'100%': {
+  					opacity: '1',
+  					transform: 'scale(1)'
+  				}
+  			},
+  			animation: {
+  				'appear-zoom': 'appear-zoom 0.5s ease-out forwards'
+  			}
+  		}
+  	}
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors],
 };
