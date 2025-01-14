@@ -29,20 +29,10 @@
   position: relative;
   padding: 1rem;
   border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
 }
 
-.puzzle-piece::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: #f0f0f0;
-  border-radius: 50%;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
+.puzzle-piece::before,
 .puzzle-piece::after {
   content: "";
   position: absolute;
@@ -50,10 +40,23 @@
   height: 30px;
   background: #f0f0f0;
   border-radius: 50%;
-  bottom: -15px;
+}
+
+/* Top circle */
+.puzzle-piece::before {
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Bottom circle */
+.puzzle-piece::after {
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(0 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
+}
+
 .curved {
   position: relative;
   margin-right: 1rem;

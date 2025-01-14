@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { HeroSection } from "@/components/ui/hero-section";
 import FeatureSection from "@/components/ui/feature";
 import PricingSection from "@/components/ui/pricing";
+import ProcessSection from "@/components/ui/process";
+
 export default function Home() {
   const { resolvedTheme } = useTheme();
   const [color, setColor] = useState("#ffffff");
@@ -37,22 +39,6 @@ export default function Home() {
         className="py-20 px-4"
       >
         <div className="max-w-4xl mx-auto space-y-8 text-lg">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            viewport={{ once: true }}
-            className="w-full max-w-2xl mx-auto mb-8"
-          >
-            <motion.img
-              src="/assets/diagnosis1.jpg"
-              alt="Child therapy session"
-              className="w-full h-auto"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-            />
-          </motion.div>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -67,6 +53,22 @@ export default function Home() {
             private therapy and assessment options designed to support your
             child's growth, development, and independence.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full max-w-2xl mx-auto mb-8"
+          >
+            <motion.img
+              src="/assets/diagnosis1.jpg"
+              alt="Child therapy session"
+              className="w-full h-auto rounded-[1rem] overflow-hidden"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+            />
+          </motion.div>
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -75,7 +77,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="puzzle-piece bg-gray-50 p-6"
             >
-              <h4 className="text-xl font-semibold text-[#1d4c6b] mb-3">
+              <h4 className="text-xl font-semibold text-black mb-3">
                 Evidence-Based Care
               </h4>
               <p>
@@ -91,7 +93,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="puzzle-piece bg-gray-50 p-6"
             >
-              <h4 className="text-xl font-semibold text-[#1d4c6b] mb-3">
+              <h4 className="text-xl font-semibold text-black mb-3">
                 Personalised Approach
               </h4>
               <p>
@@ -115,6 +117,7 @@ export default function Home() {
       </motion.section>
 
       {/* Services Section */}
+      <ProcessSection />
       <PricingSection id="pricing" />
 
       {/* CTA Section */}

@@ -1,10 +1,10 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Puzzle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export function HeroSection() {
   return (
-    <section className="py-12">
+    <section className=" px-4 md:px-0 md:py-12">
       <div className="overflow-hidden  border-muted ">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <motion.div
@@ -49,7 +49,7 @@ export function HeroSection() {
                 }}
               >
                 Book an Assessment
-                <ChevronRight className="ml-2 h-4" />
+                <Puzzle className="ml-2 h-4" />
               </Button>
               <Button
                 variant="ghost"
@@ -62,14 +62,64 @@ export function HeroSection() {
             </motion.div>
           </motion.div>
         </div>
-        <motion.img
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          src="https://panda-landing.vercel.app/hero.jpg"
-          alt="Child playing with therapeutic toys"
-          className="mx-auto mt-24 max-h-[700px] w-full max-w-7xl rounded-t-lg object-cover shadow-lg"
-        />
+        <div className="relative mt-24 max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, rotate: -45 }}
+            animate={{ opacity: 1, rotate: -45 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="absolute -top-8 left-1/4 w-12 h-12"
+          >
+            <Puzzle className="text-brand h-full w-full" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, rotate: 30 }}
+            animate={{ opacity: 1, rotate: 30 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="absolute -top-4 right-1/4 w-8 h-8"
+          >
+            <Puzzle className="text-brand h-full w-full" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, rotate: 15 }}
+            animate={{ opacity: 1, rotate: 15 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="absolute top-1/3 -left-4 w-10 h-10"
+          >
+            <Puzzle className="text-brand h-full w-full" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, rotate: -20 }}
+            animate={{ opacity: 1, rotate: -20 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="absolute top-2/3 -right-6 w-14 h-14"
+          >
+            <Puzzle className="text-brand h-full w-full" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, rotate: 45 }}
+            animate={{ opacity: 1, rotate: 45 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
+            className="absolute bottom-1/4 -left-8 w-16 h-16"
+          >
+            <Puzzle className="text-brand h-full w-full" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, rotate: -30 }}
+            animate={{ opacity: 1, rotate: -30 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+            className="absolute top-1/4 right-1/3 w-10 h-10"
+          >
+            <Puzzle className="text-brand h-full w-full" />
+          </motion.div>
+          <motion.img
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            src="https://panda-landing.vercel.app/hero.jpg"
+            alt="Child playing with therapeutic toys"
+            className="mx-auto max-h-[700px] w-full rounded-lg object-cover shadow-lg"
+          />
+        </div>
       </div>
     </section>
   );
