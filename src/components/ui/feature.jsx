@@ -6,7 +6,7 @@ const reasons = [
   {
     title: "Qualified Specialists",
     description:
-      "Our team consists of qualified, experienced professionals who specialize in autism, sensory processing, and disabilities, ensuring expert care for your child.",
+      "Our team consists of qualified, experienced professionals who specialise in autism, sensory processing, and disabilities, ensuring expert care for your child.",
     icon: <GraduationCap className="size-6" />,
     gradient: "from-[#FA700B]/10 to-[#FA700B]/40",
   },

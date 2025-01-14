@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDownIcon } from "lucide-react";
+import { ArrowDownIcon, Puzzle } from "lucide-react";
 
 const ProcessSection = () => {
   const steps = [
@@ -24,7 +24,7 @@ const ProcessSection = () => {
     {
       title: "Regular Sessions",
       description:
-        "Begin your journey with regular therapy sessions tailored to your child's personalized action plan.",
+        "Begin your journey with regular therapy sessions tailored to your child's personalised action plan.",
       delay: 0.8,
     },
   ];
@@ -57,9 +57,17 @@ const ProcessSection = () => {
                 index % 2 === 0 ? "flex-row" : "flex-row-reverse"
               }`}
             >
-              {/* Step number circle */}
-              <div className="absolute left-1/2 -translate-x-1/2 w-8 h-8 bg-[#E66507] rounded-full flex items-center justify-center text-white font-bold z-10">
-                {index + 1}
+              {/* Step number and puzzle icon */}
+              <div className="absolute left-1/2 -translate-x-1/2">
+                <div className="relative">
+                  <Puzzle
+                    className="w-20 h-20 text-[#E66507] absolute -translate-x-1/2 -translate-y-1/2"
+                    fill="currentColor"
+                  />
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl">
+                    {index + 1}
+                  </div>
+                </div>
               </div>
 
               {/* Content box */}
@@ -80,8 +88,6 @@ const ProcessSection = () => {
               <div className="flex-1" />
             </motion.div>
           ))}
-
-          {/* Final arrow */}
         </div>
       </div>
     </section>

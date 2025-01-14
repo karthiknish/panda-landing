@@ -30,9 +30,10 @@ export function HeroSection() {
               className="mx-auto max-w-screen-md text-muted-foreground lg:text-xl"
             >
               <span className="text-brand">Panda Puzzle</span> provides
-              specialized therapy and assessment services for children with
+              specialised therapy and assessment services for children with
               developmental, behavioral, and learning needs. Our experienced
-              team creates personalized solutions to help your child thrive.
+              team creates personalised solutions to help your child and the
+              family thrive.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
