@@ -31,7 +31,7 @@ export function HeroSection() {
             >
               <span className="text-brand">Panda Puzzle</span> provides
               specialised therapy and assessment services for children with
-              developmental, behavioral, and learning needs. Our experienced
+              developmental, behavioural, and learning needs. Our experienced
               team creates personalised solutions to help your child and the
               family thrive.
             </motion.p>
