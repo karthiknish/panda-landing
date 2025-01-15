@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/ui/hero-section";
 import FeatureSection from "@/components/ui/feature";
 import PricingSection from "@/components/ui/pricing";
 import ProcessSection from "@/components/ui/process";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const { resolvedTheme } = useTheme();
@@ -157,6 +158,8 @@ export default function Home() {
           </motion.button>
         </div>
       </motion.section>
+
+      <Analytics />
     </div>
   );
 }
